@@ -5,9 +5,17 @@ import java.util.List;
 public class ParkingLot extends BaseModel{
     private String name;
     private String Address;
-    private PaymentStatus paymentStatus;
+    private ParkingLotStatus parkingLotStatus;
     private List<ParkingFloor> parkingFloors;
     private List<Gate> gates;
+
+    public ParkingLotStatus getParkingLotStatus() {
+        return parkingLotStatus;
+    }
+
+    public void setParkingLotStatus(ParkingLotStatus parkingLotStatus) {
+        this.parkingLotStatus = parkingLotStatus;
+    }
 
     public String getName() {
         return name;
@@ -25,13 +33,6 @@ public class ParkingLot extends BaseModel{
         Address = address;
     }
 
-    public PaymentStatus getPaymentStatus() {
-        return paymentStatus;
-    }
-
-    public void setPaymentStatus(PaymentStatus paymentStatus) {
-        this.paymentStatus = paymentStatus;
-    }
 
     public List<ParkingFloor> getParkingFloors() {
         return parkingFloors;
